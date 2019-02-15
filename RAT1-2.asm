@@ -1,0 +1,12 @@
+.EQU LED_PORT = 0x10 ; port for output
+.CSEG
+.ORG 0x40 ; code starts here
+main_loop: 
+MOV R14, 0xFC
+ADD R29, 0x01
+MOV R30, 0xFA
+MOV R31, 0x05
+EXOR R30, 0x1F
+SUB R30, 0x1D
+SUBC R18, 0x01
+AND R0, 0x00
